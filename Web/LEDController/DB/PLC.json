@@ -1,0 +1,6 @@
+{"total":4,"rows":[
+  {"name":"环境亮度","value":"0","group":"监视量"},
+  {"name":"环境湿度","value":"0","group":"监视量"},
+  {"name":"空调状态","value":"开","group":"监视量"},
+  {"name":"风机状态","value":"开","group":"监视量"}
+]}

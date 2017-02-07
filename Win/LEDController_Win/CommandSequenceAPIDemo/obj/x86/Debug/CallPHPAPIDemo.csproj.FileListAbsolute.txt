@@ -1,0 +1,10 @@
+E:\工作目录\2016\Web全屏控制\Source\Win\Client\LEDController\CallPHPAPIDemo\bin\Debug\CallPHPAPIDemo.exe
+E:\工作目录\2016\Web全屏控制\Source\Win\Client\LEDController\CallPHPAPIDemo\bin\Debug\CallPHPAPIDemo.pdb
+E:\工作目录\2016\Web全屏控制\Source\Win\Client\LEDController\CallPHPAPIDemo\obj\x86\Debug\CallPHPAPIDemo.Form1.resources
+E:\工作目录\2016\Web全屏控制\Source\Win\Client\LEDController\CallPHPAPIDemo\obj\x86\Debug\CallPHPAPIDemo.Properties.Resources.resources
+E:\工作目录\2016\Web全屏控制\Source\Win\Client\LEDController\CallPHPAPIDemo\obj\x86\Debug\CallPHPAPIDemo.csproj.GenerateResource.Cache
+E:\工作目录\2016\Web全屏控制\Source\Win\Client\LEDController\CallPHPAPIDemo\obj\x86\Debug\CallPHPAPIDemo.exe
+E:\工作目录\2016\Web全屏控制\Source\Win\Client\LEDController\CallPHPAPIDemo\obj\x86\Debug\CallPHPAPIDemo.pdb
+E:\工作目录\2016\Web全屏控制\Source\Win\Client\LEDController\CallPHPAPIDemo\obj\x86\Debug\CallPHPAPIDemo.csprojResolveAssemblyReference.cache
+E:\工作目录\2016\Web全屏控制\Source\Win\Client\LEDController\CallPHPAPIDemo\bin\Debug\Newtonsoft.Json.dll
+E:\工作目录\2016\Web全屏控制\Source\Win\Client\LEDController\CallPHPAPIDemo\bin\Debug\Newtonsoft.Json.xml

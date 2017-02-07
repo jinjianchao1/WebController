@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - ledcontroller@localhost" uuid="8b76defb-94c1-495e-a5c0-3b5aa046000c">
+    <database-info product="MySQL" version="5.5.8-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.2">
+      <schema id="1" name="ledcontroller"/>
+      <table id="2" parent="1" name="control_unit"/>
+      <table id="3" parent="1" name="memcache"/>
+      <table id="4" parent="1" name="monitor_log"/>
+      <table id="5" parent="1" name="opt_log"/>
+      <table id="6" parent="1" name="parameter"/>
+      <table id="7" parent="1" name="plc"/>
+      <table id="8" parent="1" name="plc_dev"/>
+      <table id="9" parent="1" name="plc_monitor"/>
+      <table id="10" parent="1" name="plc_route"/>
+      <table id="11" parent="1" name="screen"/>
+      <table id="12" parent="1" name="screen_parameter"/>
+      <column id="13" parent="2" name="ID">
+        <comment>自动增长，唯一标识</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="14" parent="2" name="S_Id">
+        <comment>所属显示屏ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="15" parent="2" name="In_Row">
+        <comment>所在行</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="16" parent="2" name="In_Column">
+        <comment>所在列</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="17" parent="2" name="UnitRowCount">
+        <comment>箱体行数</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="18" parent="2" name="UnitColumnCount">
+        <comment>箱体列数</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="19" parent="2" name="CommMode">
+        <comment>通讯方式 0:串口，1：网络</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="20" parent="2" name="CommStr">
+        <comment>通讯地址 当CommMode=0时,标示串口号,当CommMode=1时,标示IP地址</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="21" parent="2" name="Comment">
+        <comment>备注</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="22" parent="2" name="CreateDate">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="23" parent="2" name="UpdateDate">
+        <comment>最后更新时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="24" parent="2" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="25" parent="2" name="FK_Control_Unit">
+        <columns>S_Id</columns>
+        <ref-key>screen.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="26" parent="3" name="ID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="27" parent="3" name="Key">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="28" parent="3" name="Value">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="29" parent="3" name="Level">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="30" parent="3" name="Status">
+        <comment>1:未执行 2-正在执行 3-成功 4-失败</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="31" parent="3" name="CreateDate">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="32" parent="3" name="UpdateDate">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="33" parent="3" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <trigger id="34" parent="3" name="tg_record_opt_log_update"/>
+      <column id="35" parent="4" name="ID">
+        <comment>自动增长，唯一标识</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="36" parent="4" name="S_id">
+        <comment>显示屏ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="37" parent="4" name="Obj_name">
+        <comment>目标对象</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="38" parent="4" name="P_type">
+        <comment>监视量类别ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="39" parent="4" name="Value">
+        <comment>监视量值</comment>
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="40" parent="4" name="CreateDate">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="41" parent="4" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="42" parent="5" name="ID">
+        <comment>自动增长，唯一标识</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="43" parent="5" name="S_id">
+        <comment>显示屏ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="44" parent="5" name="U_id">
+        <comment>操作者ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="45" parent="5" name="U_Name">
+        <comment>操作者</comment>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;&quot;&quot;&apos;</default-expression>
+      </column>
+      <column id="46" parent="5" name="S_Name">
+        <comment>显示屏名称</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="47" parent="5" name="Object">
+        <comment>操作对象,如:亮度</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="48" parent="5" name="CreateDate">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="49" parent="5" name="Details">
+        <comment>详细信息</comment>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="50" parent="5" name="M_id">
+        <comment>Memcache表中的ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="51" parent="5" name="Status">
+        <comment>如果是命令操作，则表示执行状态，否则为-1</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;-1&apos;</default-expression>
+      </column>
+      <key id="52" parent="5" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="53" parent="6" name="ID">
+        <comment>自动增长，唯一标识</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="54" parent="6" name="Name">
+        <comment>参数名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="55" parent="6" name="Type">
+        <comment>参数类别：1：监视量,2：状态量</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;2&apos;</default-expression>
+      </column>
+      <column id="56" parent="6" name="Comment">
+        <comment>备注</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="57" parent="6" name="CreateDate">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="58" parent="6" name="UpdateDate">
+        <comment>最后更新时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="59" parent="6" name="Key">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <key id="60" parent="6" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="61" parent="7" name="ID">
+        <comment>自动增长，唯一标识</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="62" parent="7" name="Name">
+        <comment>参数名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="63" parent="7" name="Address">
+        <comment>PLC地址</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="64" parent="7" name="CommMode">
+        <comment>通讯方式 0:串口，1：网络</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="65" parent="7" name="CommStr">
+        <comment>通讯地址 当CommMode=0时,标示串口号 当CommMode=1时，标示IP地址</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="66" parent="7" name="S_Id">
+        <comment>显示屏ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="67" parent="7" name="Comment">
+        <comment>备注</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="68" parent="7" name="CreateDate">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="69" parent="7" name="UpdateDate">
+        <comment>最后更新时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="70" parent="7" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="71" parent="7" name="FK_PLC">
+        <columns>S_Id</columns>
+        <ref-key>screen.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="72" parent="8" name="ID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="73" parent="8" name="PLC_Id">
+        <comment>所属PLC ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="74" parent="8" name="Dev_Name">
+        <comment>设备名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="75" parent="8" name="Dev_Id">
+        <comment>设备ID号，表示在PLC中的位置</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="76" parent="8" name="Create_Date">
+        <comment>创建日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="77" parent="8" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="78" parent="9" name="ID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="79" parent="9" name="PLC_Id">
+        <comment>所属PLC</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="80" parent="9" name="Monitor_Name">
+        <comment>监视量名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="81" parent="9" name="Monitor_Type">
+        <comment>监视量类型</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="82" parent="9" name="Monitor_Param1">
+        <comment>参数1</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="83" parent="9" name="Monitor_Param2">
+        <comment>参数2</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="84" parent="9" name="Monitor_Param3">
+        <comment>参数3</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="85" parent="9" name="Monitor_Conn_Route">
+        <comment>监视量所连接通道的</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="86" parent="9" name="Monitor_Precision">
+        <comment>监视量精度</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="87" parent="9" name="Monitor_Value">
+        <comment>监视量的值，在获取数据的时候计算</comment>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos; &apos;</default-expression>
+      </column>
+      <key id="88" parent="9" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="89" parent="10" name="ID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="90" parent="10" name="Route_Name">
+        <comment>通道名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="91" parent="10" name="PLC_Id">
+        <comment>所属PLC</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="92" parent="10" name="Route_Dev_Id">
+        <comment>此设备的ID号，依次递增</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="93" parent="10" name="Route_LC">
+        <comment>属于哪个LC  (LC：即多个输出口绑定到一个设备)—关联设备的ID号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="94" parent="10" name="Route_Output">
+        <comment>输出的通道地址</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="95" parent="10" name="Create_Date">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="96" parent="10" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="97" parent="11" name="ID">
+        <comment>自动增长，唯一标识</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="98" parent="11" name="Name">
+        <comment>屏幕名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="99" parent="11" name="Comment">
+        <comment>备注</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="100" parent="11" name="CreateDate">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="101" parent="11" name="UpdateDate">
+        <comment>最后更新时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="102" parent="11" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="103" parent="12" name="ID">
+        <comment>自动增长，唯一标识</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="104" parent="12" name="S_Id">
+        <comment>显示屏ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="105" parent="12" name="P_Id">
+        <comment>参数ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="106" parent="12" name="Value">
+        <comment>参数值</comment>
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="107" parent="12" name="CreateDate">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="108" parent="12" name="UpdateDate">
+        <comment>最后更新时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="109" parent="12" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="110" parent="12" name="FK_Screen_Parameter">
+        <columns>S_Id</columns>
+        <ref-key>screen.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="111" parent="12" name="FK_Screen_Parameter_P_ID">
+        <columns>P_Id</columns>
+        <ref-key>parameter.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+</component>

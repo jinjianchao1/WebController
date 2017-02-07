@@ -1,0 +1,12 @@
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController\AutoProg\obj\x86\Debug\AutoProg.Form1.resources
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController\AutoProg\obj\x86\Debug\AutoProg.Properties.Resources.resources
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController\AutoProg\obj\x86\Debug\AutoProg.csproj.GenerateResource.Cache
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController\AutoProg\bin\Debug\AutoProg.exe
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController\AutoProg\bin\Debug\AutoProg.pdb
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController\AutoProg\bin\Debug\Newtonsoft.Json.dll
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController\AutoProg\bin\Debug\Newtonsoft.Json.xml
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController\AutoProg\obj\x86\Debug\AutoProg.exe
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController\AutoProg\obj\x86\Debug\AutoProg.pdb
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController\AutoProg\obj\x86\Debug\AutoProg.csprojResolveAssemblyReference.cache
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController_Win\AutoProg\obj\x86\Debug\AutoProg.exe
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController_Win\AutoProg\obj\x86\Debug\AutoProg.pdb

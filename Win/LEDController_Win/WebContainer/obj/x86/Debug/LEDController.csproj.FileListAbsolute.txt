@@ -1,0 +1,7 @@
+E:\工作目录\2016\Web全屏控制\Source\Win\Client\LEDController\LEDController\bin\Debug\LEDController.exe
+E:\工作目录\2016\Web全屏控制\Source\Win\Client\LEDController\LEDController\bin\Debug\LEDController.pdb
+E:\工作目录\2016\Web全屏控制\Source\Win\Client\LEDController\LEDController\obj\x86\Debug\LEDController.Form1.resources
+E:\工作目录\2016\Web全屏控制\Source\Win\Client\LEDController\LEDController\obj\x86\Debug\LEDController.Properties.Resources.resources
+E:\工作目录\2016\Web全屏控制\Source\Win\Client\LEDController\LEDController\obj\x86\Debug\LEDController.csproj.GenerateResource.Cache
+E:\工作目录\2016\Web全屏控制\Source\Win\Client\LEDController\LEDController\obj\x86\Debug\LEDController.exe
+E:\工作目录\2016\Web全屏控制\Source\Win\Client\LEDController\LEDController\obj\x86\Debug\LEDController.pdb

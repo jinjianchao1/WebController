@@ -1,0 +1,9 @@
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController\WebContainer\obj\x86\Debug\WebContainer.Form1.resources
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController\WebContainer\obj\x86\Debug\WebContainer.csproj.GenerateResource.Cache
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController\WebContainer\bin\Debug\WebContainer.exe
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController\WebContainer\bin\Debug\WebContainer.pdb
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController\WebContainer\obj\x86\Debug\WebContainer.Properties.Resources.resources
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController\WebContainer\obj\x86\Debug\WebContainer.exe
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController\WebContainer\obj\x86\Debug\WebContainer.pdb
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController_Win\WebContainer\obj\x86\Debug\WebContainer.exe
+E:\工作目录\2016\Web全屏控制\Source\Win\LEDController_Win\WebContainer\obj\x86\Debug\WebContainer.pdb

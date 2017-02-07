@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandSequenceAPIDemo", "CommandSequenceAPIDemo\CommandSequenceAPIDemo.csproj", "{CAFC9289-D5B6-4D5F-AC5E-904C5C37C145}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebContainer", "WebContainer\WebContainer.csproj", "{5183AADE-E819-4A6F-B2AD-6738A4782B0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoProg", "AutoProg\AutoProg.csproj", "{2248A1C7-D970-4861-AB60-C60BBC312F93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAFC9289-D5B6-4D5F-AC5E-904C5C37C145}.Debug|x86.ActiveCfg = Debug|x86
+		{CAFC9289-D5B6-4D5F-AC5E-904C5C37C145}.Debug|x86.Build.0 = Debug|x86
+		{CAFC9289-D5B6-4D5F-AC5E-904C5C37C145}.Release|x86.ActiveCfg = Release|x86
+		{CAFC9289-D5B6-4D5F-AC5E-904C5C37C145}.Release|x86.Build.0 = Release|x86
+		{5183AADE-E819-4A6F-B2AD-6738A4782B0D}.Debug|x86.ActiveCfg = Debug|x86
+		{5183AADE-E819-4A6F-B2AD-6738A4782B0D}.Debug|x86.Build.0 = Debug|x86
+		{5183AADE-E819-4A6F-B2AD-6738A4782B0D}.Release|x86.ActiveCfg = Release|x86
+		{5183AADE-E819-4A6F-B2AD-6738A4782B0D}.Release|x86.Build.0 = Release|x86
+		{2248A1C7-D970-4861-AB60-C60BBC312F93}.Debug|x86.ActiveCfg = Debug|x86
+		{2248A1C7-D970-4861-AB60-C60BBC312F93}.Debug|x86.Build.0 = Debug|x86
+		{2248A1C7-D970-4861-AB60-C60BBC312F93}.Release|x86.ActiveCfg = Release|x86
+		{2248A1C7-D970-4861-AB60-C60BBC312F93}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
